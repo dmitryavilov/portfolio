@@ -249,6 +249,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./img/mainInformation/bg.jpg":
+/*!************************************!*\
+  !*** ./img/mainInformation/bg.jpg ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"34fb941e11317999f4b15ec1419ce9ca.jpg\");\n\n//# sourceURL=webpack:///./img/mainInformation/bg.jpg?");
+
+/***/ }),
+
 /***/ "./scripts/1.js":
 /*!**********************!*\
   !*** ./scripts/1.js ***!
@@ -269,7 +281,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../babel */ \"./babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/style.scss */ \"./scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _1_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./1.js */ \"./scripts/1.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ \"../node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_containerBig_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containerBig.vue */ \"./components/containerBig.vue\");\n//import * as $ from 'jquery'\n\n\n\n\n\nvar app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({\n  el: '.wrapper',\n  data: {\n    message: 'Hi!!'\n  },\n  components: {\n    containerBig: _components_containerBig_vue__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n  }\n});\n\n//# sourceURL=webpack:///./scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../babel */ \"./babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/style.scss */ \"./scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _1_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./1.js */ \"./scripts/1.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ \"../node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _img_mainInformation_bg_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/mainInformation/bg.jpg */ \"./img/mainInformation/bg.jpg\");\n/* harmony import */ var _components_containerBig_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containerBig.vue */ \"./components/containerBig.vue\");\n//import * as $ from 'jquery'\n\n\n\n\n\n\nvar app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({\n  el: '.wrapper',\n  data: {\n    message: 'Hi!!'\n  },\n  components: {\n    containerBig: _components_containerBig_vue__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n  }\n});\n\n//# sourceURL=webpack:///./scripts/index.js?");
 
 /***/ }),
 

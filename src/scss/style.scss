@@ -5,8 +5,53 @@
 
 .main-information {
     width: 100%;
-    height: 938px;
+    height: 937px;
     background-image: url(../img/mainInformation/bg.jpg);
+    backdrop-filter: blur(8px); 
     @include image(1920px 937px, center center);
+}
+
+.menu-btn {
+    display: flex;
+    @include flex-jc-spb-col();
+    height: 34px;
+
+    &__line {
+        width: 46px;
+        height: 5px;
+        background-color: #fff;
+    }
+
+    &_line_short {
+        width: 23px;
+    }
+
+    &_top {
+        padding-top: 57px;
+    }
+}
+
+.main-information-block {
+    &__title {
+        @include fw('Montserrat' sans-serif, 80px, white, 400);
+        letter-spacing: 0.05em;
+    }
+
+    &__text-wrapper {
+        margin-top: 301px;
+    }
+
+    &__profession {
+        @include fw('Montserrat' sans-serif, 23px, rgb(223, 223, 223), 300);
+        letter-spacing: 0.05em;
+        margin-top: 32px;
+    }
+
+    &__description {
+        @include f('Montserrat' sans-serif, 25px, white, 400, 132%);
+        letter-spacing: 0.02em;
+        max-width: 639px;
+        margin-top: 25px
+    }
 }
 //MAIN-INFORMATION
