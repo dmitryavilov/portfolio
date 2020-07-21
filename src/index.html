@@ -12,7 +12,7 @@
     <div class="wrapper">
         <main class="main-information">
             <container-big>
-                <div class="menu-btn menu-btn_top">
+                <div class="menu-btn menu-btn_top" @click="toggleMenu()">
                     <div class="menu-btn__line"></div>
                     <div class="menu-btn__line"></div>
                     <div class="menu-btn__line menu-btn_line_short"></div>
@@ -29,10 +29,46 @@
                             дизайн-макетам. Умею разрабатывать дизайн 
                             самостоятельно.
                         </p>
+                        <btn text="Связаться со мной" classes="main-information-block_btn"></btn>
                     </div>
+                    <!-- /.main-information-block__text-wrapper -->                 
+                    <div class="main-information-block__border-photo">
+                        <div class="main-information-block__photo"></div>
+                    </div>
+                    <!-- /.main-information-block__photo -->
                 </div>
                 <!-- /.main-information-block -->
-            </container-big>  
+            </container-big>
+            <div class="social-networks">
+                <div class="social-networks__line"></div>
+                <div class="social-networks__links">
+                    <a href="https://vk.com/ddd2305" class="social-networks__link">
+                        <div class="social-networks__link-icon"></div>
+                    </a>
+                    <a href="#" class="social-networks__link">
+                        <div class="social-networks__link-icon social-networks_link-icon_2"></div>
+                    </a>
+                    <a href="#" class="social-networks__link">
+                        <div class="social-networks__link-icon social-networks_link-icon_3"></div>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100026762172794" class="social-networks__link">
+                        <div class="social-networks__link-icon social-networks_link-icon_4"></div>
+                    </a>
+                </div>
+                <div class="social-networks__line"></div>
+            </div>
+            <!-- /.social-networks -->
+            <nav class="navigation-block">
+                <ul class="navigation-block__items-list">
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обо мне</a></li>
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Мои навыки</a></li>
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Преимущества</a></li>
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Портфолио</a></li>
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Калькулятор цены</a></li>
+                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <!-- /.navigation-block -->
         </main>
         sss
         <!-- /.main-information -->

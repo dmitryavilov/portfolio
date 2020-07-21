@@ -1,7 +1,9 @@
 /* @import '~normalize.css'; - Импорт библиотеки из Node_modules  */
 @import 'mixins.scss';
 @import './libs/reset.css';
-//IMPORTS
+//CSS, SCSS, AND LIBRARIES IMPORTS
+$brown: #402A17;
+//VARIABLES
 
 .main-information {
     width: 100%;
@@ -9,29 +11,47 @@
     background-image: url(../img/mainInformation/bg.jpg);
     backdrop-filter: blur(8px); 
     @include image(1920px 937px, center center);
+    overflow: hidden;
 }
 
 .menu-btn {
     display: flex;
     @include flex-jc-spb-col();
     height: 34px;
+    width: 46px;
 
     &__line {
-        width: 46px;
+        width: 100%;
         height: 5px;
         background-color: #fff;
+        transition: 0.4s;
     }
 
     &_line_short {
-        width: 23px;
+        width: 50%;
     }
 
     &_top {
         padding-top: 57px;
     }
+
+    &_line_active {
+        transform: rotate(44deg) translateY(20px);
+        transition: 0.4s;
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:last-child {
+            transform: rotate(-44deg) translateY(-20px);
+            width: 46px;
+        }
+    }
 }
 
 .main-information-block {
+    display: flex;
+
     &__title {
         @include fw('Montserrat' sans-serif, 80px, white, 400);
         letter-spacing: 0.05em;
@@ -39,6 +59,8 @@
 
     &__text-wrapper {
         margin-top: 301px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__profession {
@@ -53,5 +75,155 @@
         max-width: 639px;
         margin-top: 25px
     }
+
+    &__photo {
+        width: 437px;
+        height: 700px;
+        background-image: url('../img/mainInformation/ava.jpg');
+        @include image(437px 700px, center center);
+    }
+
+    &__border-photo {
+        width: 436.46px;
+        height: 700px;
+        overflow: hidden;
+        border-radius: 72px;
+        border: 8px solid rgba(0, 0, 0, 0.41);
+        margin-left: 148px;
+        margin-top: 46px;
+    }
+
+    &_btn {
+        width: 392px;
+        height: 85px;
+        border-width: 4px;
+        border-color: #FFB800;
+        font-size: 23px;
+        font-weight: 300;
+        letter-spacing: 0.09em;
+        color: white;
+        margin-top: 30px;
+        transition: 0.4s;
+
+        &:hover {
+            transition: 0.4s;
+            box-shadow: 0 0 6px 0 #FFB800;
+            color: #ffebb8;
+        }
+    }
 }
+
+.social-networks {
+    position: absolute;
+    top: 0;
+    right: 86px;
+    width: 30px;
+    display: flex;
+    @include flex-center();
+    flex-direction: column;
+    height: inherit;
+
+    &__line {
+        width: 5px;
+        height: 280px;
+        position: absolute;
+        background-color: white;
+        border-radius: 0px 0px 70px 0px;
+        &:first-child {
+            top: 0;
+        }
+
+        &:last-child {
+            transform: rotate(180deg) scale(1, 1);
+            bottom: 0;
+        }
+    }
+
+    &__links {
+        height: 249px;
+        display: flex;
+        @include flex-jc-spb-col();
+    }
+
+    &__link-icon {
+        height: 30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px 30px;
+        background-image: url('../img/mainInformation/1.svg');   
+    }
+
+    &_link-icon {
+        &_2{
+            background-image: url('../img/mainInformation/2.svg');
+            background-size: 30px 30px;
+        }
+        
+        &_3{
+            background-image: url('../img/mainInformation/3.svg');
+            background-size: 30px 30px;
+        }
+
+        &_4{
+            background-image: url('../img/mainInformation/4.svg');
+            background-size: 30px 30px;
+        }
+    }
+}
+
+.navigation-block {
+    position: fixed;
+    display: flex;
+    @include flex-center();
+    top: 0;
+    right: 0;
+    width: 250px;
+    background-color: rgba(#1b120a, 0.95);
+    height: 100vh;
+    border-left: 7px solid white;
+    transform: translateX(800px);
+    transition: 0.4s;
+
+    &_active {
+        transform: translateX(0px);
+        transition: 0.4s;
+    }
+
+    &__items-list {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 22px 0;
+
+        &-link {
+            @include fw('Montserrat', 20px, white, 400);
+            text-decoration: none;
+        }
+        
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 0;
+            height: 7px;
+            background-color: white;
+            left: 0;
+            transition: 0.3s;
+            transform: translateY(5px);
+        }
+
+        &:hover:after {
+            width: 100%;
+            transition: 0.3s;
+        }
+    }
+}
+
 //MAIN-INFORMATION
