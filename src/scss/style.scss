@@ -1,0 +1,12 @@
+/* @import '~normalize.css'; - Импорт библиотеки из Node_modules  */
+@import 'mixins.scss';
+@import './libs/reset.css';
+//IMPORTS
+
+.main-information {
+    width: 100%;
+    height: 938px;
+    background-image: url(../img/mainInformation/bg.jpg);
+    @include image(1920px 937px, center center);
+}
+//MAIN-INFORMATION
