@@ -34,4 +34,4 @@ const app = new Vue({
         nav.classList.toggle('navigation-block_active');
       }
     }
-}) 
+})

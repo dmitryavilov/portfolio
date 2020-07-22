@@ -1,12 +1,14 @@
 <template>
-    <div class="container container_big">
+    <div class="container container_big" :class="classes">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        classes: String
+    }
 }
 </script>
 
