@@ -9,20 +9,25 @@ import Vk1 from '../img/mainInformation/1.svg'
 import Inst1 from '../img/mainInformation/2.svg'
 import Github1 from '../img/mainInformation/3.svg'
 import Fb1 from '../img/mainInformation/4.svg'
+import About from '../img/about/about.png'
 //IMAGES
-import containerBig from '../components/ContainerBig.vue'
+import Container from '../components/Container.vue'
+import ContainerBig from '../components/ContainerBig.vue'
 import Btn from '../components/Btn.vue'
+import TitleOne from '../components/TitleOne.vue'
 //COMPONENTS
 
 
 const app = new Vue({
     el: '.wrapper',
     data: {
-        message: 'Hi!!'
+        about: About
     },
     components: {
-      containerBig,
-      Btn
+      Container,
+      ContainerBig,
+      Btn,
+      TitleOne
     },
     methods: {
       toggleMenu(){

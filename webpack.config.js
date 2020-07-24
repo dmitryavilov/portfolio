@@ -115,7 +115,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|webp|gif)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                }
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,

@@ -1,11 +1,10 @@
 <template>
-  <button class="default-settings" :class="classes">{{text}}</button>
+  <button class="default-settings" :class="classes"><slot></slot></button>
 </template>
 
 <script>
 export default {
     props: {
-        text: String,
         classes: String
     }
 }
