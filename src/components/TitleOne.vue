@@ -49,7 +49,8 @@ export default {
             letter-spacing: -0.01em;
 
             &-wrapper{
-                height: 46.43px;
+                height: 55px;
+                box-sizing: border-box;
                 padding-left: 25px;
                 display: flex;
                 align-items: center;
@@ -58,7 +59,52 @@ export default {
         }
 
         &_top {
-            margin-top: 60px;
+            padding-top: 60px;
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .title-block {
+            &__text {
+                font-size: 26px;
+
+                &-wrapper {
+                    height: 50px;
+                    border-width: 4px;
+                }
+            }
+
+            &__rectangle {
+                width: 50px;
+                height: 50px;
+
+                &-number {
+                    font-size: 27px;
+                }            
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .title-block {
+            &__text {
+                font-size: 22px;
+
+                &-wrapper {
+                    height: 45px;
+                    border-width: 3.5px;
+                    padding-left: 20px;
+                }
+            }
+
+            &__rectangle {
+                width: 45px;
+                height: 45px;
+
+                &-number {
+                    font-size: 23px;
+                }            
+            }
         }
     }
 </style>
