@@ -230,7 +230,7 @@ $brown: #402A17;
 //MAIN-INFORMATION
 
 .about {
-    height: 849px;
+    padding-bottom: 119px;
     width: 100%;
 }
 
@@ -314,6 +314,13 @@ $brown: #402A17;
         @include fw($mont, 20px, black, 500);
         letter-spacing: 0.05em;
         margin-top: 20px;
+        transition: 0.3s;
+
+        &:hover {
+            transition: 0.3s;
+            color: rgb(70, 70, 70);
+            border-color: rgb(70, 70, 70);;
+        }
     }
 }
 //ABOUT
