@@ -111,7 +111,6 @@ $brown: #402A17;
         transition: 0.4s;
 
         &:hover {
-            transition: 0.4s;
             box-shadow: 0 0 6px 0 #FFB800;
             color: #ffebb8;
         }
@@ -153,23 +152,11 @@ $brown: #402A17;
     &__link-icon {
         height: 30px;
         width: 30px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 30px 30px;
-        background-image: url('../img/mainInformation/1.svg');   
-    }
+        fill: #fff;
+        transition: 0.8s;
 
-    &_link-icon {
-        &_2{
-            background-image: url('../img/mainInformation/2.svg');
-        }
-        
-        &_3{
-            background-image: url('../img/mainInformation/3.svg');
-        }
-
-        &_4{
-            background-image: url('../img/mainInformation/4.svg');
+        &:hover {
+            fill: khaki;
         }
     }
 }
@@ -188,7 +175,6 @@ $brown: #402A17;
 
     &_active {
         right: 0;
-        transition: 0.4s;
     }
 
     &__items-list {
@@ -223,7 +209,6 @@ $brown: #402A17;
 
         &:hover:after {
             width: 100%;
-            transition: 0.3s;
         }
     }
 }
@@ -317,7 +302,6 @@ $brown: #402A17;
         transition: 0.3s;
 
         &:hover {
-            transition: 0.3s;
             color: rgb(70, 70, 70);
             border-color: rgb(70, 70, 70);;
         }
