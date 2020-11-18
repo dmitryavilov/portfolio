@@ -1,8 +1,11 @@
 /* @import '~normalize.css'; - Импорт библиотеки из Node_modules  */
+@import '.../~animate.css/source/animate.css';
+@import '.../~animate.css/source/_base.css';
+@import '.../~animate.css/source/attention_seekers/flash.css';
 @import 'mixins.scss';
 @import './libs/reset.css';
 //CSS, SCSS, AND LIBRARIES IMPORTS
-$mont: 'Montserrat' sans-serif;
+$mont: 'Montserrat'sans-serif;
 $brown: #402A17;
 //VARIABLES
 
@@ -43,6 +46,7 @@ $brown: #402A17;
     &_line_active {
         transform: rotate(44deg) translateY(20px);
         transition: 0.4s;
+
         &:nth-child(2) {
             opacity: 0;
         }
@@ -133,6 +137,7 @@ $brown: #402A17;
         position: absolute;
         background-color: white;
         border-radius: 0px 0px 70px 0px;
+
         &:first-child {
             top: 0;
         }
@@ -186,7 +191,8 @@ $brown: #402A17;
 
     &__item {
         margin: 18px 0;
-        max-width: 192px;;
+        max-width: 192px;
+        ;
 
         &-link {
             @include fw($mont, 20px, white, 400);
@@ -194,7 +200,7 @@ $brown: #402A17;
             text-align: center;
             line-height: 28px;
         }
-        
+
         &::after {
             position: absolute;
             display: block;
@@ -212,6 +218,7 @@ $brown: #402A17;
         }
     }
 }
+
 //MAIN-INFORMATION
 
 .about {
@@ -303,10 +310,12 @@ $brown: #402A17;
 
         &:hover {
             color: rgb(70, 70, 70);
-            border-color: rgb(70, 70, 70);;
+            border-color: rgb(70, 70, 70);
+            ;
         }
     }
 }
+
 //ABOUT
 
 .skills {
@@ -338,22 +347,51 @@ $brown: #402A17;
         width: 157px;
         height: 152px;
         background: #FFFFFF;
-        box-shadow: 8px -2px 4px rgba(0, 0, 0, 0.25);
         border-radius: 30px 30px 0px 0px;
+        transform: translateY(2px);
         display: flex;
-        justify-content: center;
+        @include flex-ai-cent-col;
+        position: relative;
 
         &-text {
             @include fw($mont, 23px, $brown, 400);
             letter-spacing: -0.03em;
             margin-top: 28px;
+            margin-bottom: 20px;
         }
 
         &s-wrapper {
             display: flex;
             justify-content: space-between;
         }
+
+        &-loading {
+            display: none;
+        }
+    }
+
+    &__number-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 44px;
+        top: 112px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include fw($mont, 20px, green, 400);
+        letter-spacing: -0.03em;
     }
 }
+
+.animated .skills-block__item-loading {
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+.ep-legend--value span {
+    display: none;
+}
+
 //SKILLS
 @import 'media.scss';

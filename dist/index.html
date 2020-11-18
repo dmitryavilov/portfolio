@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Дмитрий Авилов - Фрилансер</title>
-<link href="main.60b9a9a45ea34fd179df.css" rel="stylesheet"></head>
+<link href="vendors~main.a589e26a237e39077230.css" rel="stylesheet"><link href="main.4ad25c96a13fa0c93c9f.css" rel="stylesheet"></head>
+
 <body>
     <div class="wrapper">
         <main class="main-information" style="background-image: url('images/bg.jpg');">
@@ -25,15 +27,15 @@
                             Фрилансер. Frontend-разработчик и Web-дизайнер.
                         </p>
                         <p class="main-information-block__description">
-                            Занимаюсь созданием сайтов по готовым 
-                            дизайн-макетам. Умею разрабатывать дизайн 
+                            Занимаюсь созданием сайтов по готовым
+                            дизайн-макетам. Умею разрабатывать дизайн
                             самостоятельно.
                         </p>
                         <btn classes="main-information-block_btn">Связаться со мной</btn>
                     </div>
-                    <!-- /.main-information-block__text-wrapper -->                 
+                    <!-- /.main-information-block__text-wrapper -->
                     <div class="main-information-block__border-photo">
-                        <div class="main-information-block__photo"></div>
+                        <div class="main-information-block__photo">`</div>
                     </div>
                     <!-- /.main-information-block__photo -->
                 </div>
@@ -68,12 +70,17 @@
             <!-- /.social-networks -->
             <nav class="navigation-block">
                 <ul class="navigation-block__items-list">
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обо мне</a></li>
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Мои навыки</a></li>
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Преимущества</a></li>
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Портфолио</a></li>
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Калькулятор цены</a></li>
-                        <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обратная связь</a></li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обо мне</a></li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Мои навыки</a>
+                    </li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Преимущества</a>
+                    </li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Портфолио</a>
+                    </li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Калькулятор
+                            цены</a></li>
+                    <li class="navigation-block__item"><a class="navigation-block__item-link" href="#">Обратная
+                            связь</a></li>
                 </ul>
             </nav>
             <!-- /.navigation-block -->
@@ -113,12 +120,13 @@
                                 </div>
                                 <!-- /.about-block__benefit -->
                                 <p class="about-block__description">
-                                    Я один из немногих людей, которым нравится работать, потому что я выбрал ту профессию,
+                                    Я один из немногих людей, которым нравится работать, потому что я выбрал ту
+                                    профессию,
                                     которая мне нравится, а не ту, которую мне пытались навязать.
                                 </p>
                                 <btn classes="about-block_btn"> Написать мне</btn>
                             </div>
-                            <!-- /.about-block__text-wrapper -->  
+                            <!-- /.about-block__text-wrapper -->
                         </div>
                     </div>
                     <!-- /.about-block -->
@@ -132,38 +140,96 @@
                 <title-two>Мои умения</title-two>
                 <div class="skills-block skills-block_top">
                     <container an-class="skills-block__items-wrapper">
-                        <div class="skills-block__item">
+                        <div class="skills-block__item  wow fadeIn" data-wow-duration="0.01s">
                             <span class="skills-block__item-text">HTML</span>
                             <!-- /.skills-block__item-text -->
-                            <div class="skills-block__loading"></div>
+                            <div class="skills-block__number-wrapper">
+                                <span class="skills-block__number" data-max="93">0</span><span
+                                    class="skills-block__procent">%</span>
+                            </div>
+                            <div class="skills-block__item-loading">
+                                <vue-ellipse-progress :data="circles" :progress="93" :angle="-270" color="green"
+                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
+                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
+                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
+                                    :gap="10" dot="0" fontSize="15px">
+                                    <div class="skills-block__number-wrapper">
+                                        <span class="skills-block__number" data-max="93">0</span><span
+                                            class="skills-block__procent">%</span>
+                                    </div>
+                                </vue-ellipse-progress>
+                            </div>
                             <!-- /.skills-block__loading -->
                         </div>
                         <!-- /.skills-block__item -->
-                        <div class="skills-block__item">
+                        <div class="skills-block__item wow fadeIn" data-wow-duration="0.01s">
                             <span class="skills-block__item-text">CSS</span>
                             <!-- /.skills-block__item-text -->
-                            <div class="skills-block__loading"></div>
+                            <div class="skills-block__number-wrapper">
+                                <span class="skills-block__number" data-max="90">0</span><span
+                                    class="skills-block__procent">%</span>
+                            </div>
+                            <div class="skills-block__item-loading">
+                                <vue-ellipse-progress :data="circles" :progress="90" :angle="-270" color="green"
+                                    :size="100" :thickness="8" emptyThickness="1" :legend="true" :legendValue="180"
+                                    legendClass="legend-custom-style" dash="60 0.9" animation="default" :noData="false"
+                                    :loading="false" fontColor="black" :half="false" :gap="10" dot="0" fontSize="15px">
+                                </vue-ellipse-progress>
+                            </div>
                             <!-- /.skills-block__loading -->
                         </div>
                         <!-- /.skills-block__item -->
-                        <div class="skills-block__item">
+                        <div class="skills-block__item wow fadeIn" data-wow-duration="0.01s">
                             <span class="skills-block__item-text">JavaScript</span>
                             <!-- /.skills-block__item-text -->
-                            <div class="skills-block__loading"></div>
+                            <div class="skills-block__number-wrapper">
+                                <span class="skills-block__number" data-max="83">0</span><span
+                                    class="skills-block__procent">%</span>
+                            </div>
+                            <div class="skills-block__item-loading">
+                                <vue-ellipse-progress :data="circles" :progress="83" :angle="-270" color="green"
+                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
+                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
+                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
+                                    :gap="10" dot="0" fontSize="15px">
+                                </vue-ellipse-progress>
+                            </div>
                             <!-- /.skills-block__loading -->
                         </div>
                         <!-- /.skills-block__item -->
-                        <div class="skills-block__item">
+                        <div class=" skills-block__item wow fadeIn" data-wow-duration="0.01s">
                             <span class="skills-block__item-text">Vue.js</span>
                             <!-- /.skills-block__item-text -->
-                            <div class="skills-block__loading"></div>
+                            <div class="skills-block__number-wrapper">
+                                <span class="skills-block__number" data-max="81">0</span><span
+                                    class="skills-block__procent">%</span>
+                            </div>
+                            <div class="skills-block__item-loading">
+                                <vue-ellipse-progress :data="circles" :progress="75" :angle="-270" color="green"
+                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
+                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
+                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
+                                    :gap="10" dot="0" fontSize="15px">
+                                </vue-ellipse-progress>
+                            </div>
                             <!-- /.skills-block__loading -->
                         </div>
                         <!-- /.skills-block__item -->
-                        <div class="skills-block__item">
+                        <div class=" skills-block__item wow fadeIn" data-wow-duration="0.01s">
                             <span class="skills-block__item-text">WordPress</span>
                             <!-- /.skills-block__item-text -->
-                            <div class="skills-block__loading"></div>
+                            <div class="skills-block__number-wrapper">
+                                <span class="skills-block__number" data-max="75">0</span><span
+                                    class="skills-block__procent">%</span>
+                            </div>
+                            <div class="skills-block__item-loading">
+                                <vue-ellipse-progress :data="circles" :progress="75" :angle="-270" color="green"
+                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
+                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
+                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
+                                    :gap="10" dot="0" fontSize="15px">
+                                </vue-ellipse-progress>
+                            </div>
                             <!-- /.skills-block__loading -->
                         </div>
                         <!-- /.skills-block__item -->
@@ -179,5 +245,6 @@
         <!-- /.skills -->
     </div>
     <!-- /.wrapper -->
-<script src="vendors~main.f684af315f35ec9991e0.js"></script><script src="main.1d0cf70a12623504e43c.js"></script></body>
+<script src="vendors~main.ec2b4023287f351c0b83.js"></script><script src="main.80f3c32f1ead10692581.js"></script></body>
+
 </html>
