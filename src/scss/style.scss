@@ -321,8 +321,7 @@ $brown: #402A17;
 .skills {
     width: 100%;
     height: 320px;
-    position: relative;
-    @include image(1920px 320px, center center);
+    @include image(1920px 1275px, center center);
     overflow: hidden;
 }
 
@@ -339,7 +338,8 @@ $brown: #402A17;
     &__underline {
         background: #FFFFFF;
         border-radius: 18px 18px 0px 0px;
-        width: 1159px;
+        width: 100%;
+        max-width: 1159px;
         height: 32px;
     }
 
@@ -381,12 +381,15 @@ $brown: #402A17;
         @include fw($mont, 20px, green, 400);
         letter-spacing: -0.03em;
     }
+
+    &_item-loading_sm {
+        position: absolute;
+        transform: translateX(5000px);
+    }
 }
 
 .animated .skills-block__item-loading {
     display: block;
-    position: relative;
-    z-index: 3;
 }
 
 .ep-legend--value span {

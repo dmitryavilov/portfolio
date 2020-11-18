@@ -13,7 +13,7 @@ import Github1 from '../img/mainInformation/3.svg'
 import Fb1 from '../img/mainInformation/4.svg'
 import Sprite from '../img/sprite.svg'
 import About from '../img/about/about.png'
-import Keyboard from '../img/skills/keyboard.png'
+import Keyboard from '../img/skills/keyboard.jpg'
 //IMAGES
 import Container from '../components/Container.vue'
 import ContainerBig from '../components/ContainerBig.vue'

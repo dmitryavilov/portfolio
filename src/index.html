@@ -35,7 +35,7 @@
                     </div>
                     <!-- /.main-information-block__text-wrapper -->
                     <div class="main-information-block__border-photo">
-                        <div class="main-information-block__photo">`</div>
+                        <div class="main-information-block__photo"></div>
                     </div>
                     <!-- /.main-information-block__photo -->
                 </div>
@@ -135,9 +135,9 @@
             <!-- /.container-big -->
         </section>
         <!-- /.about -->
-        <section class="skills" style="background-image: url('images/keyboard.png');">
+        <section class="skills" style="background-image: url('images/keyboard.jpg');">
             <container-big classes="container_skills">
-                <title-two>Мои умения</title-two>
+                <title-two>Оставьте заявку</title-two>
                 <div class="skills-block skills-block_top">
                     <container an-class="skills-block__items-wrapper">
                         <div class="skills-block__item  wow fadeIn" data-wow-duration="0.01s">
@@ -147,16 +147,14 @@
                                 <span class="skills-block__number" data-max="93">0</span><span
                                     class="skills-block__procent">%</span>
                             </div>
-                            <div class="skills-block__item-loading">
-                                <vue-ellipse-progress :data="circles" :progress="93" :angle="-270" color="green"
-                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
-                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
-                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
-                                    :gap="10" dot="0" fontSize="15px">
-                                    <div class="skills-block__number-wrapper">
-                                        <span class="skills-block__number" data-max="93">0</span><span
-                                            class="skills-block__procent">%</span>
-                                    </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_lg">
+                                <vue-ellipse-progress class="1" :progress="93" line="butt" :angle="-270" color="green"
+                                    :size="100" :thickness="8" :empty-thickness="0" :gap="10" dot="0">
+                                </vue-ellipse-progress>
+                            </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_sm">
+                                <vue-ellipse-progress class="1" :progress="93" line="butt" :angle="-270" color="green"
+                                    :size="75" :thickness="6" :empty-thickness="0" :gap="10" dot="0">
                                 </vue-ellipse-progress>
                             </div>
                             <!-- /.skills-block__loading -->
@@ -169,11 +167,13 @@
                                 <span class="skills-block__number" data-max="90">0</span><span
                                     class="skills-block__procent">%</span>
                             </div>
-                            <div class="skills-block__item-loading">
-                                <vue-ellipse-progress :data="circles" :progress="90" :angle="-270" color="green"
-                                    :size="100" :thickness="8" emptyThickness="1" :legend="true" :legendValue="180"
-                                    legendClass="legend-custom-style" dash="60 0.9" animation="default" :noData="false"
-                                    :loading="false" fontColor="black" :half="false" :gap="10" dot="0" fontSize="15px">
+                            <div class="skills-block__item-loading skills-block_item-loading_lg">
+                                <vue-ellipse-progress :progress="90" line="butt" :angle="-270" color="green" :size="100"
+                                    :thickness="8" :empty-thickness="0" :gap="10" dot="0">
+                            </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_sm">
+                                <vue-ellipse-progress class="1" :progress="90" line="butt" :angle="-270" color="green"
+                                    :size="75" :thickness="6" :empty-thickness="0" :gap="10" dot="0">
                                 </vue-ellipse-progress>
                             </div>
                             <!-- /.skills-block__loading -->
@@ -186,12 +186,13 @@
                                 <span class="skills-block__number" data-max="83">0</span><span
                                     class="skills-block__procent">%</span>
                             </div>
-                            <div class="skills-block__item-loading">
-                                <vue-ellipse-progress :data="circles" :progress="83" :angle="-270" color="green"
-                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
-                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
-                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
-                                    :gap="10" dot="0" fontSize="15px">
+                            <div class="skills-block__item-loading skills-block_item-loading_lg">
+                                <vue-ellipse-progress :progress="83" line="butt" :angle="-270" color="green" :size="100"
+                                    :thickness="8" :empty-thickness="0" :gap="10" dot="0">
+                            </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_sm">
+                                <vue-ellipse-progress class="1" :progress="83" line="butt" :angle="-270" color="green"
+                                    :size="75" :thickness="6" :empty-thickness="0" :gap="10" dot="0">
                                 </vue-ellipse-progress>
                             </div>
                             <!-- /.skills-block__loading -->
@@ -204,12 +205,13 @@
                                 <span class="skills-block__number" data-max="81">0</span><span
                                     class="skills-block__procent">%</span>
                             </div>
-                            <div class="skills-block__item-loading">
-                                <vue-ellipse-progress :data="circles" :progress="75" :angle="-270" color="green"
-                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
-                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
-                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
-                                    :gap="10" dot="0" fontSize="15px">
+                            <div class="skills-block__item-loading skills-block_item-loading_lg">
+                                <vue-ellipse-progress :progress="81" line="butt" :angle="-270" color="green" :size="100"
+                                    :thickness="8" :empty-thickness="0" :gap="10" dot="0">
+                            </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_sm">
+                                <vue-ellipse-progress class="1" :progress="81" line="butt" :angle="-270" color="green"
+                                    :size="75" :thickness="6" :empty-thickness="0" :gap="10" dot="0">
                                 </vue-ellipse-progress>
                             </div>
                             <!-- /.skills-block__loading -->
@@ -222,12 +224,13 @@
                                 <span class="skills-block__number" data-max="75">0</span><span
                                     class="skills-block__procent">%</span>
                             </div>
-                            <div class="skills-block__item-loading">
-                                <vue-ellipse-progress :data="circles" :progress="75" :angle="-270" color="green"
-                                    :emptyColor="white" :size="100" :thickness="8" emptyThickness="1" :legend="true"
-                                    :legendValue="180" legendClass="legend-custom-style" dash="60 0.9"
-                                    animation="default" :noData="false" :loading="false" fontColor="black" :half="false"
-                                    :gap="10" dot="0" fontSize="15px">
+                            <div class="skills-block__item-loading skills-block_item-loading_lg">
+                                <vue-ellipse-progress :progress="75" line="butt" :angle="-270" color="green" :size="100"
+                                    :thickness="8" :empty-thickness="0" :gap="10" dot="0">
+                            </div>
+                            <div class="skills-block__item-loading skills-block_item-loading_sm">
+                                <vue-ellipse-progress class="1" :progress="75" line="butt" :angle="-270" color="green"
+                                    :size="75" :thickness="6" :empty-thickness="0" :gap="10" dot="0">
                                 </vue-ellipse-progress>
                             </div>
                             <!-- /.skills-block__loading -->

@@ -23,4 +23,44 @@
             letter-spacing: -0.03em;
         }
     }
+
+    @media (max-width: 1200px) {
+        .title-block-two {
+            &__title {
+                font-size: 37px;
+            }
+        }
+    }
+
+    @media (max-width: 870px) {
+        .title-block-two {
+            &__title {
+                font-size: 35px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .title-block-two {
+            &__title {
+                font-size: 31px;
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .title-block-two {
+            &__title {
+                font-size: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .title-block-two {
+            &__title {
+                font-size: 25px;
+            }
+        }
+    }
 </style>
