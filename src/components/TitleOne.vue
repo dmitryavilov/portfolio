@@ -1,5 +1,5 @@
 <template>
-    <div class="title-block title-block_top">
+    <div class="title-block title-block_top" :class="classes">
         <div class="title-block__rectangle">
             <div class="title-block__rectangle-number">{{number}}</div>
         </div>
@@ -12,7 +12,8 @@
 <script>
 export default {
     props: {
-        number: String
+        number: String,
+        classes: String
     }
 }
 </script>
@@ -39,6 +40,18 @@ export default {
                 color: white;
                 letter-spacing: 0.1em;
             }
+        }
+
+        &_reverse {
+            transform: scale(-1, 1);
+        }
+
+        &_reverse &__rectangle-number {
+            transform: scale(-1, 1);
+        }
+
+        &_reverse &__text {
+            transform: scale(-1, 1);
         }
 
         &__text {
@@ -148,7 +161,11 @@ export default {
 
             &__rectangle {
                 width: 37px;
-                height: 37px;         
+                height: 37px;
+                
+                &-number {
+                    font-size: 18px;
+                }
             }
         }
 
