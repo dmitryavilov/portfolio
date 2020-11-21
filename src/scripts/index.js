@@ -4,6 +4,8 @@ import {a} from './1.js'
 import Vue from 'vue'
 import VueEllipseProgress from 'vue-ellipse-progress'
 import WOW from 'wowjs'
+import SimpleBar from 'simplebar'
+import 'simplebar/dist/simplebar.css';
 //LIBS AND FRAMEWORKS
 import MainBg from '../img/mainInformation/bg.jpg'
 import Ava from '../img/mainInformation/ava.jpg'
@@ -14,6 +16,8 @@ import Fb1 from '../img/mainInformation/4.svg'
 import Sprite from '../img/sprite.svg'
 import About from '../img/about/about.png'
 import Keyboard from '../img/skills/keyboard.jpg'
+import PortfolioBg from '../img/portfolio/pbg.jpg'
+import Project from '../img/portfolio/project.png'
 //IMAGES
 import Container from '../components/Container.vue'
 import ContainerBig from '../components/ContainerBig.vue'
@@ -65,7 +69,6 @@ for ( let i of document.querySelectorAll(".skills-block__number") ) {
     }
   });
 }
-	
 
 var wow = new WOW.WOW({
   live: false
