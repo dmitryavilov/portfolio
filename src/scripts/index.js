@@ -18,6 +18,9 @@ import About from '../img/about/about.png'
 import Keyboard from '../img/skills/keyboard.jpg'
 import PortfolioBg from '../img/portfolio/pbg.jpg'
 import Project from '../img/portfolio/project.png'
+import Arrow2 from '../img/calculator/arrow2.svg'
+import Arrow2rev from '../img/calculator/arrow2rev.svg'
+import Round from '../img/calculator/round.svg'
 //IMAGES
 import Container from '../components/Container.vue'
 import ContainerBig from '../components/ContainerBig.vue'
@@ -30,7 +33,11 @@ Vue.use(VueEllipseProgress);
 const app = new Vue({
   el: '.wrapper',
   data: {
-    about: About
+    what: 1,
+    time: 0.5,
+    type: 0.5,
+    count: 1.001,
+    wp: 1
   },
   components: {
     Container,
@@ -40,14 +47,39 @@ const app = new Vue({
     TitleTwo
   },
   methods: {
-    toggleMenu() {
+    toggleMenu(){
       let lines = document.querySelectorAll('.menu-btn__line'),
         nav = document.querySelector('.navigation-block');
       for (let i = 0; i < lines.length; i++) {
         lines[i].classList.toggle('menu-btn_line_active');
       }
       nav.classList.toggle('navigation-block_active');
+    },
+    click(event){
+      if (event.target.classList.contains('drop-list')){
+        event.target.closest('.drop-list').classList.toggle('drop-list_active');
+      } else {
+        let list = document.querySelectorAll('.drop-list');
+        for (let i = 0; i < list.length; i++) {
+          list[i].classList.remove('drop-list_active');
+        }
+      }
+    },
+    unblock(event){
+      if(event.target.value==2){
+        document.querySelector('.calculator-block__variant-blocked').style.display="none";
+      } else {
+        document.querySelector('.calculator-block__variant-blocked').style.display="block";
+      }
     }
+  },
+  computed: {
+    finalPrice(){
+      return Math.round((+this.time*1000+(+this.what*1000))*+this.wp*+this.type+(+this.count*1000));
+    }
+  },
+  filters: {
+    format: val => `${val}`.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '),
   }
 });
 

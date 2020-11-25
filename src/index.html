@@ -564,6 +564,113 @@
             <!-- /container-big -->
         </section>
         <!-- /.portfolio -->
+        <section class="calculator" @click="click($event)">
+            <container-big>
+                <title-one number="05">Узнайте примерную цену</title-one>
+                <container>
+                    <div class="calculator-block calculator-block_top">
+                        <div class="calculator-block__variants-wrapper">
+                            <div class="calculator-block__variant">
+                                <h3 class="calculator-block__variant-title">Что нужно сделать?</h3>
+                                <div class="drop-list-wrapper">
+                                    <div class="drop-list-border drop-list-border_calc"></div>
+                                    <select class="drop-list drop-list_calc" v-model="what">
+                                        <option value="1" disabled selected>Выберите, что нужно сделать</option>
+                                        <option value="1.75">Дизайн</option>
+                                        <option value="2">Вёрстка</option>
+                                        <option value="3.75">Вёрстка и Дизайн</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.calculator-block__variant -->
+                            <div class="calculator-block__variant">
+                                <h3 class="calculator-block__variant-title">В какие сроки нужно уложиться?</h3>
+                                <div class="drop-list-wrapper">
+                                    <div class="drop-list-border drop-list-border_calc"></div>
+                                    <select class="drop-list drop-list_calc" v-model="time">
+                                        <option value="0.5" disabled selected>Выберите срок выполнения</option>
+                                        <option value="15">1-3 дня</option>
+                                        <option value="13">3-5 дней</option>
+                                        <option value="3">1 неделя</option>
+                                        <option value="2">2 недели</option>
+                                        <option value="1">Больше</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.calculator-block__variant -->
+                            <div class="calculator-block__variant">
+                                <h3 class="calculator-block__variant-title">Тип сайта</h3>
+                                <div class="drop-list-wrapper">
+                                    <div class="drop-list-border drop-list-border_calc"></div>
+                                    <select class="drop-list drop-list_calc" @input="unblock($event)" v-model="type">
+                                        <option value="0.5" disabled selected>Выберите тип сайта</option>
+                                        <option value="1">Одностраничный</option>
+                                        <option value="2">Многостраничный</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.calculator-block__variant -->
+                            <div class="calculator-block__variant">
+                                <h3 class="calculator-block__variant-title">Количество страниц</h3>
+                                <div class="drop-list-wrapper">
+                                    <div class="drop-list-border drop-list-border_calc"></div>
+                                    <select class="drop-list drop-list_calc" v-model="count">
+                                        <option value="1.001" disabled selected>Выберите количество страниц</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">6+</option>
+                                    </select>
+                                </div>
+                                <div class="calculator-block__variant-blocked"></div>
+                            </div>
+                            <!-- /.calculator-block__variant -->
+
+                        </div>
+                        <!-- /.calculator-block__variants-wrapper -->
+                        <div class="calculator-block__variant calculator-block_variant_last">
+                            <h3 class="calculator-block__variant-title">Нужна ли посадка на
+                                систему управления? (
+                                WordPress )</h3>
+                            <div class="calculator-block__radio-wrapper">
+                                <input id="checkbox-1" v-model="wp" value="2" type="radio" name="ch"
+                                    class="calculator-block__checkbox">
+                                <label class="calculator-block__label" for="checkbox-1">Да</label>
+                            </div>
+                            <div class="calculator-block__radio-wrapper">
+                                <input id="checkbox-2" v-model="wp" value="1" type="radio" name="ch"
+                                    class="calculator-block__checkbox">
+                                <label class="calculator-block__label" for="checkbox-2">Нет</label>
+                            </div>
+                        </div>
+                        <!-- /.calculator-block__variant -->
+                        <div class="points-block calculator-block__points points-block_pos">
+                            <div class="points-block__point calculator-block__point"></div>
+                            <div class="points-block__point calculator-block__point"></div>
+                            <div class="points-block__point calculator-block__point"></div>
+                        </div>
+                        <!-- /.calculator-block__points -->
+                        <div class="calculator-block__result-wrapper">
+                            <div class="calculator-block__rectangle">
+                                <div class="calculator-block__text-wrapper">
+                                    <span class="calculator-block__result">Результат:</span>
+                                    <span class="calculator-block__result-tag">{{finalPrice | format}} руб.</span>
+                                </div>
+                                <!-- /.calculator-block__text-wrapper -->
+                            </div>
+                            <!-- /.calculator-block__rectangle -->
+                        </div>
+                        <!-- /.caculator-block__result-wrapper -->
+                    </div>
+                </container>
+                <!-- /.calculator-block -->
+            </container-big>
+            <!-- /container-big -->
+        </section>
+        <!-- /.calculator -->
     </div>
     <!-- /.wrapper -->
 </body>

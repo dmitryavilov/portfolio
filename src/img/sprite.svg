@@ -38,4 +38,8 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 8" id="arrow">
     <path d="M9.854 4.354a.5.5 0 000-.708L6.672.464a.5.5 0 10-.708.708L8.793 4 5.964 6.828a.5.5 0 10.708.708l3.182-3.182zM0 4.5h9.5v-1H0v1z"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 15" id="arrow2">
+    <path d="M0 1.914L1.616 0l11.048 13.086L11.048 15z"></path>
+    <path d="M20.384.087L22 2l-9.507 11.26-1.616-1.914z"></path>
+  </symbol>
 </svg>
