@@ -20,6 +20,26 @@
      }
 
      @media (max-width: 1200px) {
-         .container_def {}
+         .container_def {
+             max-width: 768px;
+         }
+     }
+
+     @media (max-width: 870px) {
+         .container_def {
+             max-width: 690px;
+         }
+     }
+
+     @media (max-width: 768px) {
+         .container_def {
+             max-width: 576px;
+         }
+     }
+
+     @media (max-width: 650px) {
+         .container_def {
+             max-width: 480px;
+         }
      }
  </style>

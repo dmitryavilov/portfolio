@@ -71,6 +71,15 @@ const app = new Vue({
       } else {
         document.querySelector('.calculator-block__variant-blocked').style.display="block";
       }
+    },
+    resActive(){
+      const res = document.querySelector('.calculator-block__result-sm-wrapper');
+      res.classList.remove('calculator-block_result-sm_active');
+      res.classList.add('calculator-block_result-sm_active');
+    },
+    resDis(){
+      const res = document.querySelector('.calculator-block__result-sm-wrapper');
+      res.classList.remove('calculator-block_result-sm_active');
     }
   },
   computed: {
