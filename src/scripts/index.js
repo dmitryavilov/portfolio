@@ -96,6 +96,23 @@ const app = new Vue({
         submitButton.disabled = true;
         submitButton.classList.add('form_btn_disabled');
       }
+    },
+    preventDefault: function(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+        e.preventDefault();
+      e.returnValue = false;  
+    },
+    disableScroll(){
+      if (document.querySelector('.navigation-block').classList.contains('navigation-block_active')){
+        window.addEventListener('DOMMouseScroll', this.preventDefault, false);
+        document.addEventListener('wheel', this.preventDefault, {passive: false});
+        document.addEventListener('scroll', this.preventDefault, {passive: false});
+      } else {
+        window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
+        document.removeEventListener('wheel', this.preventDefault, {passive: false});
+        document.removeEventListener('scroll', this.preventDefault, {passive: false});
+      }
     }
   },
   computed: {
@@ -128,6 +145,13 @@ window.addEventListener('scroll', function onScroll() {
     }
   });
 }
+
+// function clickMenu(event){
+//     document.querySelector('body').style.overflowY="hidden";
+// }
+
+// let menu = document.querySelector('.menu-btn');
+// menu.onclick = clickMenu;
 
 var wow = new WOW.WOW({
   live: false

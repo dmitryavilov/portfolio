@@ -14,7 +14,7 @@
     <div class="wrapper" @click="click($event)">
         <main class="main-information" style="background-image: url('images/bg.jpg');">
             <container-big classes="main-information_lg">
-                <div class="menu-btn menu-btn_top" @click="toggleMenu()">
+                <div class="menu-btn menu-btn_top" @click="toggleMenu();disableScroll();">
                     <div class="menu-btn__line"></div>
                     <div class="menu-btn__line"></div>
                     <div class="menu-btn__line menu-btn_line_short"></div>
