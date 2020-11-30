@@ -166,6 +166,7 @@
     border-left: 7px solid white;
     right: -800px;
     transition: 0.4s;
+    z-index: 999;
 
     &_active {
         right: 0;

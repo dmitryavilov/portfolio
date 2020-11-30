@@ -128,30 +128,21 @@ const app = new Vue({
 document.querySelector('.form__btn').disabled = true
 
 for ( let i of document.querySelectorAll(".skills-block__number") ) {
-
 let numberTop = i.getBoundingClientRect().top,
     start = +i.innerHTML,
     end = +i.dataset.max;
-
-window.addEventListener('scroll', function onScroll() {
-  if(window.pageYOffset > numberTop - window.innerHeight) {
-    this.removeEventListener('scroll', onScroll);
-      let interval = this.setInterval(function() {
-        i.innerHTML = ++start;
-        if(start == end) {
-          clearInterval(interval);
+    window.addEventListener('scroll', function onScroll() {
+      if(window.pageYOffset > numberTop - window.innerHeight) {
+        this.removeEventListener('scroll', onScroll);
+          let interval = this.setInterval(function() {
+            i.innerHTML = ++start;
+            if(start == end) {
+              clearInterval(interval);
+            }
+        }, 9);
         }
-    }, 9);
-    }
-  });
+      });
 }
-
-// function clickMenu(event){
-//     document.querySelector('body').style.overflowY="hidden";
-// }
-
-// let menu = document.querySelector('.menu-btn');
-// menu.onclick = clickMenu;
 
 var wow = new WOW.WOW({
   live: false
