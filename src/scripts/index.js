@@ -21,15 +21,19 @@ import Project from '../img/portfolio/project.png'
 import Arrow2 from '../img/calculator/arrow2.svg'
 import Arrow2rev from '../img/calculator/arrow2rev.svg'
 import Round from '../img/calculator/round.svg'
+import Fbg from '../img/feedback/fbg.jpg'
+import User from '../img/feedback/user.svg'
+import Arb from '../img/feedback/arb.svg'
+import Check from '../img/feedback/checking-mark.svg'
 //IMAGES
 import Container from '../components/Container.vue'
 import ContainerBig from '../components/ContainerBig.vue'
 import Btn from '../components/Btn.vue'
 import TitleOne from '../components/TitleOne.vue'
 import TitleTwo from '../components/TitleTwo.vue'
-//COMPONENTs
-
+//COMPONENTS
 Vue.use(VueEllipseProgress);
+
 const app = new Vue({
   el: '.wrapper',
   data: {
@@ -37,7 +41,8 @@ const app = new Vue({
     time: 0.5,
     type: 0.5,
     count: 1.001,
-    wp: 1
+    wp: 1,
+    fb: 1
   },
   components: {
     Container,
@@ -80,6 +85,17 @@ const app = new Vue({
     resDis(){
       const res = document.querySelector('.calculator-block__result-sm-wrapper');
       res.classList.remove('calculator-block_result-sm_active');
+    },
+    unblock(){
+      let submitButton = document.querySelector('.form__btn');
+      let checkbox = document.querySelector('.form__checkbox');
+      if (checkbox.checked && document.querySelector('.form__drop-list').value!=0) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('form_btn_disabled');
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add('form_btn_disabled');
+      }
     }
   },
   computed: {
@@ -92,15 +108,17 @@ const app = new Vue({
   }
 });
 
+document.querySelector('.form__btn').disabled = true
+
 for ( let i of document.querySelectorAll(".skills-block__number") ) {
 
-  let numberTop = i.getBoundingClientRect().top,
-      start = +i.innerHTML,
-      end = +i.dataset.max;
+let numberTop = i.getBoundingClientRect().top,
+    start = +i.innerHTML,
+    end = +i.dataset.max;
 
-  window.addEventListener('scroll', function onScroll() {
-    if(window.pageYOffset > numberTop - window.innerHeight) {
-      this.removeEventListener('scroll', onScroll);
+window.addEventListener('scroll', function onScroll() {
+  if(window.pageYOffset > numberTop - window.innerHeight) {
+    this.removeEventListener('scroll', onScroll);
       let interval = this.setInterval(function() {
         i.innerHTML = ++start;
         if(start == end) {

@@ -8,10 +8,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Дмитрий Авилов - Фрилансер</title>
-<link href="vendors~main.61dbe5e3a5d443ee7a51.css" rel="stylesheet"><link href="main.963697e3a01fa2ced798.css" rel="stylesheet"></head>
+<link href="vendors~main.c91c4a71feda7a49189f.css" rel="stylesheet"><link href="main.1ea27328e8464ffc36eb.css" rel="stylesheet"></head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" @click="click($event)">
         <main class="main-information" style="background-image: url('images/bg.jpg');">
             <container-big classes="main-information_lg">
                 <div class="menu-btn menu-btn_top" @click="toggleMenu()">
@@ -564,7 +564,7 @@
             <!-- /container-big -->
         </section>
         <!-- /.portfolio -->
-        <section class="calculator" @click="click($event)">
+        <section class="calculator">
             <container-big>
                 <title-one number="05">Узнайте примерную цену</title-one>
                 <container class="container_def">
@@ -683,8 +683,198 @@
             <!-- /container-big -->
         </section>
         <!-- /.calculator -->
+        <section class="feedback" style="background-image: url('./images/fbg.jpg');">
+            <container class="container_def">
+                <title-two>Оставьте заявку</title-two>
+                <div class="feedback-block feedback-block_top">
+                    <form action="/" method="POST" class="form feedback-block__form">
+                        <div class="points-block points-block_pos form__points">
+                            <div class="points-block__point form__point"></div>
+                            <div class="points-block__point form__point"></div>
+                            <div class="points-block__point form__point"></div>
+                        </div>
+                        <!-- /.points-block -->
+                        <div class="form__underline"></div>
+                        <!-- /.form__underline -->
+                        <div class="form__inputs-group">
+                            <div class="form__input-wrapper">
+                                <input type="text" placeholder="Введите ваши Имя и Отчество" required
+                                    aria-required="true" class="input form__input">
+                                <div class="form__line"></div>
+                            </div>
+                            <!-- /.form__input-wrapper -->
+                            <div class="form__input-wrapper">
+                                <input type="text" v-if="fb==1" placeholder="Введите ссылку на ваш VK" required
+                                    aria-required="true" class="input">
+                                <input type="text" v-if="fb==2" placeholder="Введите ваш номер телефона" required
+                                    aria-required="true" class="input">
+                                <select class="drop-list-min" v-model="fb">
+                                    <option value="1" class="drop-list-min__item">
+                                        ВКонтакте
+                                    </option>
+                                    <option value="2" class="drop-list-min__item">Телефон</option>
+                                </select>
+                                <svg class="drop-list-min__icon" v-if="fb==1">
+                                    <use xlink:href="images/sprite.svg#2"></use>
+                                </svg>
+                                <svg class="drop-list-min__icon" v-if="fb==2">
+                                    <use xlink:href="images/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="drop-list-wrapper">
+                                <div class="drop-list-border form__border"></div>
+                                <select class="drop-list form__drop-list" @input="unblock()">
+                                    <option value="0" disabled selected>Выберите, что нужно сделать</option>
+                                    <option value="Вёрстка">Вёрстка</option>
+                                    <option value="Дизайн">Дизайн</option>
+                                    <option value="Вёрстка и дизайн">Вёрстка и дизайн</option>
+                                    <option value="Верстка, дизайн, посадка на WP">
+                                        Верстка, дизайн, посадка на WP
+                                    </option>
+                                    <option value="Вёрстка, посадка на WP">Вёрстка, посадка на WP</option>
+                                    <option value="Посадка на WP">Посадка на WP</option>
+                                </select>
+                            </div>
+                            <div class="form__privacy">
+                                <input type="checkbox" @click="unblock()" class="form__checkbox" id="form-checkbox" aria
+                                    aria-required="true">
+                                <label for="form-checkbox" class="form__checkbox-label"></label>
+                                <span class="form__privacy-text">Я согласен на <a href="privacy.html"
+                                        class="form__privacy-link" target="_blank">обработку персональных
+                                        данных</a></span>
+                            </div>
+                        </div>
+                        <!-- /.form__input-wrapper -->
+
+                        <!-- /.form__privacy -->
+                        <btn classes="form__btn form_btn_disabled" @input="unblockTwo()">Оставить заявку</btn>
+                    </form>
+                    <!-- /.feedback-block__form -->
+                    <div class="feedback-block__links-wrapper">
+                        <div class="feedback-block__variant">
+                            <h2 class="feedback-block__title">Я в соц сетях</h2>
+                            <div class="feedback-block__social-links">
+                                <div class="feedback-block__line"></div>
+                                <!-- /.feedback-block__line -->
+                                <div class="feedback-block__line"></div>
+                                <!-- /.feedback-block__line -->
+                                <div class="social-link feedback-block__social-link">
+                                    <div class="social-link__icon-wrapper">
+                                        <svg class="social-link__icon">
+                                            <use xlink:href="images/sprite.svg#2"></use>
+                                        </svg>
+                                    </div>
+                                    <!-- /.social-link__icon-wrapper -->
+                                    <span class="social-link__text">vk.com/ddd2305</span>
+                                    <a href="https://vk.com/ddd2305" class="social-link__link">
+                                        <button class="social-link__btn">
+                                            GO !
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- /.social-link -->
+                                <div class="social-link feedback-block__social-link">
+                                    <div class="social-link__icon-wrapper">
+                                        <svg class="social-link__icon">
+                                            <use xlink:href="images/sprite.svg#1"></use>
+                                        </svg>
+                                    </div>
+                                    <!-- /.social-link__icon-wrapper -->
+                                    <span class="social-link__text">fb.com/d_avilov</span>
+                                    <a href="https://fb.com/d_avilov" class="social-link__link">
+                                        <button class="social-link__btn">
+                                            GO !
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- /.social-link -->
+                                <div class="social-link feedback-block__social-link">
+                                    <div class="social-link__icon-wrapper">
+                                        <svg class="social-link__icon">
+                                            <use xlink:href="images/sprite.svg#3"></use>
+                                        </svg>
+                                    </div>
+                                    <!-- /.social-link__icon-wrapper -->
+                                    <span class="social-link__text">instagram.com/ddd2122</span>
+                                    <a href="https://instagram.com/ddd2122" class="social-link__link">
+                                        <button class="social-link__btn">
+                                            GO !
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- /.social-link -->
+                            </div>
+                            <!-- /.feedback-block__social-link -->
+                        </div>
+                        <!-- /.feedback-block__variant -->
+                        <div class="feedback-block__other">
+                            <h2 class="feedback-block__second-title">Другие способы связи</h2>
+                            <div class="feedback-block__other-links-wrapper">
+                                <div class="feedback-block__other-links">
+                                    <div class="other-link">
+                                        <div class="other-link__icon-wrapper">
+                                            <svg class="other-link__icon">
+                                                <use xlink:href="images/sprite.svg#phone"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- /.other-link__icon-wrapper -->
+                                        <a href="tel:+79667891731" class="other-link__text">+7-966-789-17-31</a>
+                                    </div>
+                                    <!-- /.other-link -->
+                                    <div class="other-link">
+                                        <div class="other-link__icon-wrapper">
+                                            <svg class="other-link__icon">
+                                                <use xlink:href="images/sprite.svg#mail"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- /.other-link__icon-wrapper -->
+                                        <a href="mailto:d.av89@yandex.ru" class="other-link__text">d.av89@yandex.ru</a>
+                                    </div>
+                                    <!-- /.other-link -->
+                                    <div class="feedback-block__other-line"></div>
+                                    <!-- /.feedback-block__other-line -->
+                                </div>
+                                <!-- /.feedback-block__other-links -->
+                                <div class="feedback-block__round-links">
+                                    <a href="#" class="feedback-block__link">
+                                        <div class="round-link">
+                                            <svg class="round-link__icon">
+                                                <use xlink:href="images/sprite.svg#twitter"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <!-- /.round-link -->
+                                    <a href="#" class="feedback-block__link">
+                                        <div class="round-link">
+                                            <svg class="round-link__icon">
+                                                <use xlink:href="images/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <!-- /.round-link -->
+                                </div>
+                                <!-- /.feedback-block__round-links -->
+                            </div>
+                            <!-- /.feedback-block__other-links-wrapper -->
+                        </div>
+                        <!-- /.feedback-block__other -->
+                    </div>
+                    <!-- /.feedback-block__links-wrapper -->
+                </div>
+                <!-- /.feedback-block -->
+            </container>
+            <!-- /.container-def -->
+        </section>
+        <!-- /.feedback -->
+        <footer class="footer">
+            <div class="footer__container">
+
+            </div>
+            <!-- /.footer__container -->
+        </footer>
+        <!-- /.footer -->
     </div>
     <!-- /.wrapper -->
-<script src="vendors~main.29cf49a593e6cb8e1f45.js"></script><script src="main.61848b2097e8af0ab7fc.js"></script></body>
+<script src="vendors~main.6f66766b065d8f92b8d4.js"></script><script src="main.9e954701d105b2d20bf8.js"></script></body>
 
 </html>
