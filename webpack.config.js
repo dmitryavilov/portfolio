@@ -35,7 +35,12 @@ module.exports = {
     optimization: optimization(),
     plugins: [
         new HTMLWebpackPlugin({
+            filename: 'index.html',
             template: './index.html'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'privacy.html',
+            template: './privacy.html'
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
