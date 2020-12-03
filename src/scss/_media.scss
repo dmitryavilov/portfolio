@@ -465,7 +465,9 @@
             width: 215px;
             min-height: 51px;
             font-size: 16px;
-            margin-top: 42px;
+            &-wrapper {
+                margin-top: 42px;
+            }
         }
     }
 
@@ -1003,7 +1005,9 @@
             width: 192px;
             min-height: 51px;
             font-size: 14px;
-            margin-top: 35px;
+            &_wrapper{
+                margin-top: 35px;
+            }
         }
     }
 

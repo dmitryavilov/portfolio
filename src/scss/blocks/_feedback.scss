@@ -167,23 +167,25 @@
         font-size: 20px;
         line-height: 27px;
         letter-spacing: -0.03em;
-        margin-top: 55px;
         transition: 0.4s;
         color: $brown;
+
+        &-wrapper {
+            margin-top: 55px;
+        }
 
         &:hover {
             border-color: darkgreen;
             color: darkgreen;
         }
-    }
+        &_disabled {
+            border-color: lightgray;
+            color: lightgray;
 
-    &_btn_disabled {
-        border-color: lightgray;
-        color: lightgray;
-
-        &:hover {
-            border-color: darkred;
-            color: darkred;
+            &:hover {
+                border-color: darkred;
+                color: darkred;
+            }
         }
     }
 

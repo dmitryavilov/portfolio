@@ -33,7 +33,6 @@ import TitleOne from '../components/TitleOne.vue'
 import TitleTwo from '../components/TitleTwo.vue'
 //COMPONENTS
 Vue.use(VueEllipseProgress);
-
 const app = new Vue({
   el: '.wrapper',
   data: {
@@ -42,7 +41,8 @@ const app = new Vue({
     type: 0.5,
     count: 1.001,
     wp: 1,
-    fb: 1
+    fb: 1,
+    phone: ''
   },
   components: {
     Container,
@@ -86,15 +86,15 @@ const app = new Vue({
       const res = document.querySelector('.calculator-block__result-sm-wrapper');
       res.classList.remove('calculator-block_result-sm_active');
     },
-    unblock(){
+    unblocked(){
       let submitButton = document.querySelector('.form__btn');
       let checkbox = document.querySelector('.form__checkbox');
       if (checkbox.checked && document.querySelector('.form__drop-list').value!=0) {
         submitButton.disabled = false;
-        submitButton.classList.remove('form_btn_disabled');
+        submitButton.classList.remove('form__btn_disabled');
       } else {
         submitButton.disabled = true;
-        submitButton.classList.add('form_btn_disabled');
+        submitButton.classList.add('form__btn_disabled');
       }
     },
     preventDefault: function(e) {
@@ -112,6 +112,16 @@ const app = new Vue({
         window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
         document.removeEventListener('wheel', this.preventDefault, {passive: false});
         document.removeEventListener('scroll', this.preventDefault, {passive: false});
+      }
+    },
+    unblockTwo(){
+      let inputs = document.querySelectorAll('.input');
+      for (let i=0;i<inputs.length;i++){
+        if(inputs[0].value && inputs[1].value){
+          inputs[i].style.borderColor="#402A17";
+        } else {
+          inputs[i].style.borderColor="darkred"
+        }
       }
     }
   },
