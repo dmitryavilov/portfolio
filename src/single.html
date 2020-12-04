@@ -88,10 +88,14 @@
             data-simplebar-auto-hide="false"
           >
             <img
+              @load="load()"
               src="images/project.jpg"
               alt="Project: photo"
               class="portfolio-img-wrapper__img"
             />
+            <svg class="portfolio-img-wrapper__preloader">
+              <use xlink:href="images/sprite.svg#reload"></use>
+            </svg>
           </div>
           <!-- /.portfolio-img-wrapper -->
         </container>

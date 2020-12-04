@@ -124,6 +124,11 @@ const app = new Vue({
           inputs[i].style.borderColor="darkred"
         }
       }
+    },
+    load(){
+      const img = document.querySelector('.portfolio-img-wrapper__img');
+      img.style.visibility="visible";
+      document.querySelector('.portfolio-img-wrapper').style.overflowY="visible";
     }
   },
   computed: {
@@ -135,6 +140,7 @@ const app = new Vue({
     format: val => `${val}`.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '),
   }
 });
+
 
 document.querySelector('.form__btn').disabled = true
 
@@ -153,7 +159,7 @@ let numberTop = i.getBoundingClientRect().top,
         }, 9);
         }
       });
-}
+};
 
 var wow = new WOW.WOW({
   live: false

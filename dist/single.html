@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="vendors~main.c91c4a71feda7a49189f.css" rel="stylesheet"><link href="main.f6975f657adb2d6735fb.css" rel="stylesheet"></head>
+  <link href="vendors~main.c91c4a71feda7a49189f.css" rel="stylesheet"><link href="main.3abf2b9a739b0418ecf2.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
       <header class="header">
@@ -88,10 +88,14 @@
             data-simplebar-auto-hide="false"
           >
             <img
+              @load="load()"
               src="images/project.jpg"
               alt="Project: photo"
               class="portfolio-img-wrapper__img"
             />
+            <svg class="portfolio-img-wrapper__preloader">
+              <use xlink:href="images/sprite.svg#reload"></use>
+            </svg>
           </div>
           <!-- /.portfolio-img-wrapper -->
         </container>
@@ -130,5 +134,5 @@
       </div>
     </footer>
     <!-- /.footer -->
-  <script src="vendors~main.6f66766b065d8f92b8d4.js"></script><script src="main.b851e0043ebe01cda344.js"></script></body>
+  <script src="vendors~main.6f66766b065d8f92b8d4.js"></script><script src="main.4512b5ae51e7184e2945.js"></script></body>
 </html>

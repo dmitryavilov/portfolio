@@ -1,3 +1,14 @@
+@keyframes preload {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 body {
     background-color: #EDEDED;
 }
@@ -110,10 +121,31 @@ body {
         border: 2px solid #BDBDBD;
         border-radius: 17px;
         overflow-x: hidden;
+        position: relative;
+        overflow-y: hidden;
 
         &__img {
             width: 100%;
+            visibility: hidden;
             object-fit: cover;
+            transition: 0.4s;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__preloader {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            fill: $brown;
+            transform: translate(-50%, -50%);
+            animation-name: preload;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
     }
 
