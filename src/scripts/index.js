@@ -25,6 +25,7 @@ import Fbg from '../img/feedback/fbg.jpg'
 import User from '../img/feedback/user.svg'
 import Arb from '../img/feedback/arb.svg'
 import Check from '../img/feedback/checking-mark.svg'
+import Single from '../img/single/project.jpg'
 //IMAGES
 import Container from '../components/Container.vue'
 import ContainerBig from '../components/ContainerBig.vue'

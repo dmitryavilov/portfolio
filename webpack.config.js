@@ -42,6 +42,10 @@ module.exports = {
             filename: 'privacy.html',
             template: './privacy.html'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'single.html',
+            template: './single.html'
+        }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns: [

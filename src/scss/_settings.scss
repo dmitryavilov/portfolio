@@ -3,7 +3,11 @@
 }
 
 body {
-    font-family: 'Montserrat'sans-serif;
+    font-family: 'Montserrat' sans-serif;
+}
+
+a:focus {
+    outline: none;
 }
 
 ::-webkit-scrollbar-button {
